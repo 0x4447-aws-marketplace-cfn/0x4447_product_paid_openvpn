@@ -1,0 +1,6 @@
+{
+	"ElasticIPIDParam": {
+		"Description": "The ID of the Elastic IP used within the custom software.",
+        "Type": "String"
+	}
+}

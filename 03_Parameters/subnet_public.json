@@ -1,0 +1,6 @@
+{
+	"VPCSubnetsPublicParam": {
+		"Description": "The ID of a Public subnet from the selected VPC.",
+		"Type": "AWS::EC2::Subnet::Id"
+	}
+}
