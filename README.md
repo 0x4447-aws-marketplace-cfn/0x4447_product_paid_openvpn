@@ -17,11 +17,11 @@ Once deployed the stack will create a EC2 instance automatically for you, with a
 <a target="_blank" href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=zer0x4447-openvpn&templateURL=https://s3.amazonaws.com/0x4447-drive-cloudformation/openvpn-server.json">
 <img align="left" style="float: left; margin: 0 10px 0 0;" src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a>
 
-All you need to do to deploy this stack is click the button to the left and follow the instructions that CloudFormation provides in your AWS Dashboard. Alternatively you can download the CF file from [here](https://s3.amazonaws.com/0x4447-drive-cloudformation/rsyslog-server.json).
+All you need to do to deploy this stack is click the button to the left and follow the instructions that CloudFormation provides in your AWS Dashboard. Alternatively you can download the CF file from [here](https://s3.amazonaws.com/0x4447-drive-cloudformation/openvpn-server.json).
 
 # What will deploy?
 
-![openvpn-server](https://raw.githubusercontent.com/0x4447/0x4447_product_openvpn/assets/diagram.png)
+![openvpn-server](https://raw.githubusercontent.com/0x4447/0x4447_product_paid_openvpn/assets/diagram.png)
 
 The stack takes advantage of one EC2 Instance. Other resources are listed bellow.
 
