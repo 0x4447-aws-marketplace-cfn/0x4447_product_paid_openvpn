@@ -1,27 +1,27 @@
 # OpenVPN-Server
 
-<img align="left" style="float: left; margin: 0 10px 0 0;" src="https://raw.githubusercontent.com/0x4447/0x4447_product_rsyslog/assets/product.png">
+<img align="left" style="float: left; margin: 0 10px 0 0;" src="https://raw.githubusercontent.com/0x4447/0x4447_product_paid_openvpn/assets/product.png">
 
-We created this CloudFormation file to allow an easy and automated deployment process of our [custom OpenVPN AMI product](https://aws.amazon.com/marketplace/pp/B07YN9CCV4/) - available in the [AWS Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=80edcebf-11fb-4c36-a3f4-49eb40b518a3). 
+We created this CloudFormation file to allow an easy and automated deployment process of our [custom OpenVPN AMI product](https://aws.amazon.com/marketplace/pp/B0839R5C7Z?ref=_ptnr_social_github) - available in the [AWS Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=80edcebf-11fb-4c36-a3f4-49eb40b518a3?ref=_ptnr_social_github). 
 
-You can find the full documentation of how to use our product here: [documentation.0x4447.com](https://documentation.0x4447.com/products/cloud/aws-marketplace/rsyslog-server.html).
+You can find the full documentation of how to use our product here: [documentation.0x4447.com](https://documentation.0x4447.com/products/cloud/aws-marketplace/openvpn-server.html).
 
 # Feature of the stack
 
 Once deployed the stack will create a EC2 instance automatically for you, with a special alarm to automatically recover if there was a AWS Hardware failure. Meaning the OpenVPN server will always be available. Also by default the Instance have termination protection ON.
 
-**IMPORTANT**: all the unique server configuration is stored in a S3 bucket. Thanks to this, if our software detects that the data is in the bucket, it will use what is in the bucket - this  way your clients will be able to reconnect to the instance automatically with minimal downtime. 
+**IMPORTANT**: all the unique server configuration is stored in the EFS drive. Meaning if you use the same EFS ID in the UserData section - the server will work exactly how you left it.
 
 # How to deploy
 
-<a target="_blank" href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=zer0x4447-rsyslog&templateURL=https://s3.amazonaws.com/0x4447-drive-cloudformation/rsyslog-server.json">
+<a target="_blank" href="https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=zer0x4447-openvpn&templateURL=https://s3.amazonaws.com/0x4447-drive-cloudformation/openvpn-server.json">
 <img align="left" style="float: left; margin: 0 10px 0 0;" src="https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png"></a>
 
 All you need to do to deploy this stack is click the button to the left and follow the instructions that CloudFormation provides in your AWS Dashboard. Alternatively you can download the CF file from [here](https://s3.amazonaws.com/0x4447-drive-cloudformation/rsyslog-server.json).
 
 # What will deploy?
 
-![rsyslog-server](https://raw.githubusercontent.com/0x4447/0x4447_product_rsyslog/assets/diagram.png)
+![openvpn-server](https://raw.githubusercontent.com/0x4447/0x4447_product_rsyslog/assets/diagram.png)
 
 The stack takes advantage of one EC2 Instance. Other resources are listed bellow.
 
