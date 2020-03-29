@@ -21,7 +21,7 @@ All you need to do to deploy this stack is click the button to the left and foll
 
 # What will deploy?
 
-![openvpn-server](https://raw.githubusercontent.com/0x4447/0x4447_product_rsyslog/assets/diagram.png)
+![openvpn-server](https://raw.githubusercontent.com/0x4447/0x4447_product_openvpn/assets/diagram.png)
 
 The stack takes advantage of one EC2 Instance. Other resources are listed bellow.
 
