@@ -3,7 +3,7 @@
         "Type" : "AWS::EC2::Instance",
         "Properties" : {
             "IamInstanceProfile": { "Ref": "ECSInstanceProfile" },
-			"ImageId": { "Fn::FindInMap": ["OSIDs", {"Ref": "AWS::Region"}, "64"] },
+			"ImageId": { "Fn::If": [ "isCustomAMI", { "Ref": "CustomAMIIdParam" }, { "Fn::FindInMap": ["OSIDs", {"Ref": "AWS::Region"}, "64"] } ] },
 			"InstanceType": { "Ref": "InstanceTypeParam" },
 			"KeyName": { "Ref" : "KeyNameParam" },			
 			"DisableApiTermination": true,
@@ -21,9 +21,11 @@
 
 				{ "Fn::Sub": "EFS_ID=${EFSID}" },
 				{ "Fn::Sub": "EIP_ID=${ElasticIPIDParam}" },
+				{ "Fn::Sub": "SERVER_DNS=${ServerDNSParam}" },
 
 				"echo EFS_ID=$EFS_ID >> /home/ec2-user/.env",
 				"echo EIP_ID=$EIP_ID >> /home/ec2-user/.env",
+				"echo server_dns=$SERVER_DNS >> /home/ec2-user/.env",
 
 				{ "Fn::Sub": "sudo /opt/aws/bin/cfn-init -v --region ${AWS::Region} --stack ${AWS::StackName} --resource EC2Instance" },
 

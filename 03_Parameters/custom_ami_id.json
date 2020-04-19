@@ -1,0 +1,6 @@
+{
+	"CustomAMIIdParam": {
+		"Description": "OPTIONAL: you can provide an AMI ID and this ID will be use to create the stack overwriting the offcial ID. This option should be used for debugging and development.",
+        "Type": "String"
+	}
+}

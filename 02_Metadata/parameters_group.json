@@ -19,9 +19,18 @@
 					"VPCParam", 
 					"VPCSubnetsPublicParam",
 					"CidrParam",
+					"ElasticIPIDParam",
 					"ElasticIPParam",
-					"ElasticIPIDParam"
+					"ServerDNSParam"
 				]
+			},
+			{
+				"Label" : { "default" : "Resiliance" },
+				"Parameters" : [ "EFSID" ]
+			},
+			{
+				"Label" : { "default" : "Debugging" },
+				"Parameters" : [ "CustomAMIIdParam" ]
 			}
 		],
 		"ParameterLabels": {
@@ -32,6 +41,8 @@
 			"CidrParam": { "default" : "VPC CIDR" },
 			"VPCSubnetsPublicParam": { "default" : "Public Subnet" },
 			"ElasticIPParam": { "default" : "Elastic IP Address" },
+			"CustomAMIIdParam": { "default" : "Custom AMI ID" },
+			"ServerDNSParam": { "default" : "DNS Address" },
 			"ElasticIPIDParam": { "default" : "Elastic IP ID" }
 		}
 	}
