@@ -22,10 +22,18 @@
 				{ "Fn::Sub": "EFS_ID=${EFSID}" },
 				{ "Fn::Sub": "EIP_ID=${ElasticIPIDParam}" },
 				{ "Fn::Sub": "SERVER_DNS=${ServerDNSParam}" },
+				
+				{ "Fn::Sub": "VPN_SPLIT_TUNNEL=${SplitTunnelParam}" },
+				{ "Fn::Sub": "VPN_SPLIT_TUNNEL_NETWORK=${SplitTunnelNetworkParam}" },
+				{ "Fn::Sub": "VPN_SPLIT_TUNNEL_SUBNET=${SplitTunnelSubnetParam}" },
 
 				"echo EFS_ID=$EFS_ID >> /home/ec2-user/.env",
 				"echo EIP_ID=$EIP_ID >> /home/ec2-user/.env",
-				"echo server_dns=$SERVER_DNS >> /home/ec2-user/.env",
+				"echo SERVER_DNS=$SERVER_DNS >> /home/ec2-user/.env",
+				
+				"echo VPN_SPLIT_TUNNEL=$VPN_SPLIT_TUNNEL >> /home/ec2-user/.env",
+				"echo VPN_SPLIT_TUNNEL_NETWORK=$VPN_SPLIT_TUNNEL_NETWORK >> /home/ec2-user/.env",
+				"echo VPN_SPLIT_TUNNEL_SUBNET=$VPN_SPLIT_TUNNEL_SUBNET >> /home/ec2-user/.env",
 
 				{ "Fn::Sub": "sudo /opt/aws/bin/cfn-init -v --region ${AWS::Region} --stack ${AWS::StackName} --resource EC2Instance" },
 

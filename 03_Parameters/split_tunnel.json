@@ -1,0 +1,11 @@
+{
+    "SplitTunnelParam" : {
+        "Type" : "String",
+        "Default" : "true",
+        "Description" : "Select if you want only selected traffci to go to the private AWS networks.",
+        "AllowedValues" : [ 
+            "true", 
+            "false"
+        ]
+    }
+}

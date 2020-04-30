@@ -25,6 +25,14 @@
 				]
 			},
 			{
+				"Label" : { "default" : "Routing" },
+				"Parameters" : [ 
+					"SplitTunnelParam",
+					"SplitTunnelNetworkParam",
+					"SplitTunnelSubnetParam" 
+				]
+			},
+			{
 				"Label" : { "default" : "Resiliance" },
 				"Parameters" : [ "EFSID" ]
 			},
@@ -43,7 +51,10 @@
 			"ElasticIPParam": { "default" : "Elastic IP Address" },
 			"CustomAMIIdParam": { "default" : "Custom AMI ID" },
 			"ServerDNSParam": { "default" : "DNS Address" },
-			"ElasticIPIDParam": { "default" : "Elastic IP ID" }
+			"ElasticIPIDParam": { "default" : "Elastic IP ID" },
+			"SplitTunnelParam": { "default" : "Enable Tunneling?" },
+			"SplitTunnelNetworkParam": { "default" : "Network IP" },
+			"SplitTunnelSubnetParam": { "default" : "Network Mask" }
 		}
 	}
 }
