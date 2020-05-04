@@ -2,7 +2,7 @@
 	"EC2Role": {
 		"Type": "AWS::IAM::Role",
 		"Properties": {
-			"RoleName": { "Fn::Sub": "0x4447_openvpn_EC2_${UniqueIdentifierParam}" },
+			"RoleName": { "Fn::Sub": "0x4447_openvpn_EC2_${AWS::Region}_${UniqueIdentifierParam}" },
 			"AssumeRolePolicyDocument": {
 				"Version": "2012-10-17",
 				"Statement": [
