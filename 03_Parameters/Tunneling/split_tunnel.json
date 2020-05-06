@@ -2,7 +2,7 @@
     "SplitTunnelParam" : {
         "Type" : "String",
         "Default" : "true",
-        "Description" : "Select if you want only selected traffci to go to the private AWS networks.",
+        "Description" : "Set too TRUE if you want only the traffic for the remote network to be sent over the VPN. If set to FALSE, all traffic will go through the VPN.",
         "AllowedValues" : [ 
             "true", 
             "false"

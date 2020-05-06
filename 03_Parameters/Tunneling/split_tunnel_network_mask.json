@@ -1,6 +1,6 @@
 {
 	"SplitTunnelSubnetParam": {
-		"Description": "The subnet mask that needs to be applied to the network IP. For Example: 255.255.255.0",
+		"Description": "OPTIONAL: The subnet mask that needs to be applied to the network IP. For Example: 255.255.255.0",
         "Type": "String"
 	}
 }
