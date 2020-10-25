@@ -19,8 +19,8 @@
 
 				"#!/bin/bash",
 
-				{ "Fn::Sub": "EFS_ID=${EFSID}" },
-				{ "Fn::Sub": "EIP_ID=${ElasticIPIDParam}" },
+				{ "Fn::Sub": "EFS_ID=${EFS}" },
+				{ "Fn::Sub": "EIP_ID=${ElasticIP}" },
 				{ "Fn::Sub": "SERVER_DNS=${ServerDNSParam}" },
 				
 				{ "Fn::Sub": "VPN_SPLIT_TUNNEL=${SplitTunnelParam}" },

@@ -19,8 +19,6 @@
 					"VPCParam", 
 					"VPCSubnetsPublicParam",
 					"CidrParam",
-					"ElasticIPIDParam",
-					"ElasticIPParam",
 					"ServerDNSParam"
 				]
 			},
@@ -31,10 +29,6 @@
 					"SplitTunnelNetworkParam",
 					"SplitTunnelSubnetParam" 
 				]
-			},
-			{
-				"Label" : { "default" : "Resiliance" },
-				"Parameters" : [ "EFSID" ]
 			},
 			{
 				"Label" : { "default" : "Debugging" },
@@ -48,10 +42,8 @@
 			"VPCParam": { "default" : "VPC ID" },
 			"CidrParam": { "default" : "VPC CIDR" },
 			"VPCSubnetsPublicParam": { "default" : "Public Subnet" },
-			"ElasticIPParam": { "default" : "Elastic IP Address" },
 			"CustomAMIIdParam": { "default" : "Custom AMI ID" },
 			"ServerDNSParam": { "default" : "DNS Address" },
-			"ElasticIPIDParam": { "default" : "Elastic IP ID" },
 			"SplitTunnelParam": { "default" : "Enable Tunneling?" },
 			"SplitTunnelNetworkParam": { "default" : "Network IP" },
 			"SplitTunnelSubnetParam": { "default" : "Network Mask" }

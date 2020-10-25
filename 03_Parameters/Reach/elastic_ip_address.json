@@ -1,6 +1,0 @@
-{
-	"ElasticIPParam": {
-		"Description": "The IP address to be used to tell the EC2 Instacne to use for the fixed public IP.",
-        "Type": "String"
-	}
-}

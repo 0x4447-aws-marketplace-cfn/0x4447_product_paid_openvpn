@@ -1,6 +1,0 @@
-{
-	"EFSID": {
-		"Description": "The ID of the EFS drive where your unique data will be stored.",
-        "Type": "String"
-	}
-}
