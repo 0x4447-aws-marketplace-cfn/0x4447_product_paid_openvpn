@@ -6,6 +6,10 @@
 				"Parameters" : [ "UniqueIdentifierParam" ]
 			},
 			{
+				"Label" : { "default" : "Monitoring" },
+				"Parameters" : [ "EmailParam" ]
+			},
+			{
 				"Label" : { "default" : "Access" },
 				"Parameters" : [ "KeyNameParam" ]
 			},
@@ -17,8 +21,8 @@
 				"Label" : { "default" : "Network" },
 				"Parameters" : [ 
 					"VPCParam", 
-					"VPCSubnetsPublicParam",
 					"CidrParam",
+					"VPCSubnetsPublicParam",
 					"ServerDNSParam"
 				]
 			},
@@ -46,7 +50,7 @@
 			"ServerDNSParam": { "default" : "DNS Address" },
 			"SplitTunnelParam": { "default" : "Enable Tunneling?" },
 			"SplitTunnelNetworkParam": { "default" : "Network IP" },
-			"SplitTunnelSubnetParam": { "default" : "Network Mask" }
+			"SplitTunnelSubnetParam": { "default" : "Network Mask" },
 			"EmailParam": { "default" : "Email" }
 		}
 	}
