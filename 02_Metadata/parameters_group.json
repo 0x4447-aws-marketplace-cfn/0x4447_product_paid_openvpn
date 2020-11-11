@@ -47,6 +47,7 @@
 			"SplitTunnelParam": { "default" : "Enable Tunneling?" },
 			"SplitTunnelNetworkParam": { "default" : "Network IP" },
 			"SplitTunnelSubnetParam": { "default" : "Network Mask" }
+			"EmailParam": { "default" : "Email" }
 		}
 	}
 }
