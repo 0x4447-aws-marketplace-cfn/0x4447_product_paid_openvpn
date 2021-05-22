@@ -1,1 +1,1 @@
-A OpenVPN server created for ease of use.
+VPN Server - Using OpenVPN - product of 0x4447
