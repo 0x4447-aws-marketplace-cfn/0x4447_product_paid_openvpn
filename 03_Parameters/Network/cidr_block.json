@@ -1,6 +1,6 @@
 {
-	"CidrParam": {
-		"Description": "The CIDR block of the selected VPC. For example 10.0.0.0/16. This will be used in Security Groups to allow traffic only within this network.",
+    "CidrParam": {
+        "Description": "The CIDR block off the selected VPC. For example 10.0.0.0/16, 172.31.0.0/16, etc. We use this information for the Security Groups and other places that require routing configuration.",
         "Type": "String"
-	}
+    }
 }
