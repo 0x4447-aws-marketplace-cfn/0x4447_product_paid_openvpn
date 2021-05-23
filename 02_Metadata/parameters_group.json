@@ -6,52 +6,48 @@
 				"Parameters" : [ "UniqueIdentifierParam" ]
 			},
 			{
+				"Label" : { "default" : "EC2 Instance" },
+				"Parameters" : [
+					"InstanceTypeParam",
+					"KeyNameParam"
+				]
+			},
+			{
+				"Label" : { "default" : "Network" },
+				"Parameters" : [
+					"VPCParam",
+					"VPCSubnetsPublicParam",
+					"CidrParam"
+				]
+			},
+			{
 				"Label" : { "default" : "Monitoring" },
 				"Parameters" : [ "EmailParam" ]
 			},
 			{
-				"Label" : { "default" : "Access" },
-				"Parameters" : [ "KeyNameParam" ]
-			},
-			{
-				"Label" : { "default" : "EC2 Instance" },
-				"Parameters" : [ "InstanceTypeParam" ]
-			},
-			{
-				"Label" : { "default" : "Network" },
-				"Parameters" : [ 
-					"VPCParam", 
-					"CidrParam",
-					"VPCSubnetsPublicParam",
-					"ServerDNSParam"
-				]
-			},
-			{
-				"Label" : { "default" : "Routing" },
-				"Parameters" : [ 
+				"Label" : { "default" : "Product Configuration" },
+				"Parameters" : [
 					"SplitTunnelParam",
 					"SplitTunnelNetworkParam",
-					"SplitTunnelSubnetParam" 
+					"SplitTunnelSubnetParam"
 				]
-			},
-			{
-				"Label" : { "default" : "Debugging" },
-				"Parameters" : [ "CustomAMIIdParam" ]
 			}
 		],
 		"ParameterLabels": {
-			"UniqueIdentifierParam": { "default" : "Unique Identifier" },			
-			"KeyNameParam": { "default" : "EC2 Private Key" },
+			"UniqueIdentifierParam": { "default" : "Unique Identifier" },
+
 			"InstanceTypeParam": { "default" : "Instance Type" },
+			"KeyNameParam": { "default" : "EC2 Private Key" },
+
 			"VPCParam": { "default" : "VPC ID" },
-			"CidrParam": { "default" : "VPC CIDR" },
 			"VPCSubnetsPublicParam": { "default" : "Public Subnet" },
-			"CustomAMIIdParam": { "default" : "Custom AMI ID" },
-			"ServerDNSParam": { "default" : "DNS Address" },
+			"CidrParam": { "default" : "VPC CIDR" },
+
+			"EmailParam": { "default" : "Email" },
+
 			"SplitTunnelParam": { "default" : "Enable Tunneling?" },
 			"SplitTunnelNetworkParam": { "default" : "Network IP" },
-			"SplitTunnelSubnetParam": { "default" : "Network Mask" },
-			"EmailParam": { "default" : "Email" }
+			"SplitTunnelSubnetParam": { "default" : "Network Mask" }
 		}
 	}
 }

@@ -1,6 +1,0 @@
-{
-	"ServerDNSParam": {
-		"Description": "OPTIONAL: you can provide a DNS name to be used when creating a OpenVPN profile, this way instead of connecting directly to the IP o the server, the DNS address will be used. This gives you more flexibility.",
-        "Type": "String"
-	}
-}
