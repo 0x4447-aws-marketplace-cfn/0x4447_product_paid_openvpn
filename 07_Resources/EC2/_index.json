@@ -3,9 +3,9 @@
         "Type" : "AWS::EC2::Instance",
         "Properties" : {
             "IamInstanceProfile": { "Ref": "ECSInstanceProfile" },
-			"ImageId": { "Fn::If": [ "isCustomAMI", { "Ref": "CustomAMIIdParam" }, { "Fn::FindInMap": ["OSIDs", {"Ref": "AWS::Region"}, "64"] } ] },
+			"ImageId": { "Fn::FindInMap": ["OSIDs", {"Ref": "AWS::Region"}, "64"] },
 			"InstanceType": { "Ref": "InstanceTypeParam" },
-			"KeyName": { "Ref" : "KeyNameParam" },			
+			"KeyName": { "Ref" : "KeyNameParam" },
 			"DisableApiTermination": { "Fn::If": [ "isCustomAMI", false, true ] },
 			"NetworkInterfaces": [{
 				"AssociatePublicIpAddress" : true,
@@ -22,7 +22,7 @@
 				{ "Fn::Sub": "EFS_ID=${EFS}" },
 				{ "Fn::Sub": "EIP_ID=${ElasticIP}" },
 				{ "Fn::Sub": "SERVER_DNS=${ServerDNSParam}" },
-				
+
 				{ "Fn::Sub": "VPN_SPLIT_TUNNEL=${SplitTunnelParam}" },
 				{ "Fn::Sub": "VPN_SPLIT_TUNNEL_NETWORK=${SplitTunnelNetworkParam}" },
 				{ "Fn::Sub": "VPN_SPLIT_TUNNEL_SUBNET=${SplitTunnelSubnetParam}" },
@@ -30,7 +30,7 @@
 				"echo EFS_ID=$EFS_ID >> /home/ec2-user/.env",
 				"echo EIP_ID=$EIP_ID >> /home/ec2-user/.env",
 				"echo SERVER_DNS=$SERVER_DNS >> /home/ec2-user/.env",
-				
+
 				"echo VPN_SPLIT_TUNNEL=$VPN_SPLIT_TUNNEL >> /home/ec2-user/.env",
 				"echo VPN_SPLIT_TUNNEL_NETWORK=$VPN_SPLIT_TUNNEL_NETWORK >> /home/ec2-user/.env",
 				"echo VPN_SPLIT_TUNNEL_SUBNET=$VPN_SPLIT_TUNNEL_SUBNET >> /home/ec2-user/.env",
