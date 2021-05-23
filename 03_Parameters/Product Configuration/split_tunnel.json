@@ -2,9 +2,9 @@
     "SplitTunnelParam" : {
         "Type" : "String",
         "Default" : "true",
-        "Description" : "Set too FALSE if you want only the traffic for the remote network to be sent over the VPN. If set to TRUE, all traffic will go through the VPN.",
-        "AllowedValues" : [ 
-            "true", 
+        "Description" : "Set to FALSE if you want only the traffic for the remote network to be sent over the VPN. If set to TRUE, all traffic will go through the VPN.",
+        "AllowedValues" : [
+            "true",
             "false"
         ]
     }
