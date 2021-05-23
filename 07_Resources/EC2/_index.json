@@ -6,7 +6,7 @@
 			"ImageId": { "Fn::FindInMap": ["OSIDs", {"Ref": "AWS::Region"}, "64"] },
 			"InstanceType": { "Ref": "InstanceTypeParam" },
 			"KeyName": { "Ref" : "KeyNameParam" },
-			"DisableApiTermination": { "Fn::If": [ "isCustomAMI", false, true ] },
+			"DisableApiTermination": true,
 			"NetworkInterfaces": [{
 				"AssociatePublicIpAddress" : true,
 				"DeviceIndex": "0",
@@ -21,7 +21,6 @@
 
 				{ "Fn::Sub": "EFS_ID=${EFS}" },
 				{ "Fn::Sub": "EIP_ID=${ElasticIP}" },
-				{ "Fn::Sub": "SERVER_DNS=${ServerDNSParam}" },
 
 				{ "Fn::Sub": "VPN_SPLIT_TUNNEL=${SplitTunnelParam}" },
 				{ "Fn::Sub": "VPN_SPLIT_TUNNEL_NETWORK=${SplitTunnelNetworkParam}" },
@@ -29,7 +28,6 @@
 
 				"echo EFS_ID=$EFS_ID >> /home/ec2-user/.env",
 				"echo EIP_ID=$EIP_ID >> /home/ec2-user/.env",
-				"echo SERVER_DNS=$SERVER_DNS >> /home/ec2-user/.env",
 
 				"echo VPN_SPLIT_TUNNEL=$VPN_SPLIT_TUNNEL >> /home/ec2-user/.env",
 				"echo VPN_SPLIT_TUNNEL_NETWORK=$VPN_SPLIT_TUNNEL_NETWORK >> /home/ec2-user/.env",
