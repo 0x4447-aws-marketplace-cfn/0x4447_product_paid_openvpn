@@ -1,0 +1,6 @@
+{
+	"EFSIDParam": {
+		"Description": "Provide the EFS ID that you want to boot.",
+        "Type": "String"
+	}
+}

@@ -1,5 +1,5 @@
 {
-	"AWS::CloudFormation::Interface" : {
+	"AWS::CloudFormation::Interface": {
 		"ParameterGroups": [
 			{
 				"Label" : { "default" : "Deployment" },
@@ -13,10 +13,11 @@
 				]
 			},
 			{
-				"Label" : { "default" : "Network" },
-				"Parameters" : [
+				"Label": { "default": "Network" },
+				"Parameters": [
 					"VPCParam",
 					"VPCSubnetsPublicParam",
+					"AZParam",
 					"CidrParam"
 				]
 			},
@@ -27,9 +28,10 @@
 			{
 				"Label" : { "default" : "Product Configuration" },
 				"Parameters" : [
-					"SplitTunnelParam",
-					"SplitTunnelNetworkParam",
-					"SplitTunnelSubnetParam"
+					"InstanceIPParam",
+					"EFSIDParam",
+					"VirtualSubnetParam",
+					"SplitTunnelParam"
 				]
 			}
 		],
@@ -41,13 +43,14 @@
 
 			"VPCParam": { "default" : "VPC ID" },
 			"VPCSubnetsPublicParam": { "default" : "Public Subnet" },
-			"CidrParam": { "default" : "VPC CIDR" },
+			"AZParam": { "default" : "AZ" },
 
 			"EmailParam": { "default" : "Email" },
 
-			"SplitTunnelParam": { "default" : "Enable Tunneling?" },
-			"SplitTunnelNetworkParam": { "default" : "Network IP" },
-			"SplitTunnelSubnetParam": { "default" : "Network Mask" }
+			"InstanceIPParam": { "default" : "Instance Public IP" },
+			"EFSIDParam": { "default" : "EFS ID" },
+			"VirtualSubnetParam": { "default" : "Virtual Subnet for the VPN" },
+			"SplitTunnelParam": { "default" : "Split tunnel" }
 		}
 	}
 }

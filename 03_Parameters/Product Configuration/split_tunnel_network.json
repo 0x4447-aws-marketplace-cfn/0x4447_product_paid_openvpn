@@ -1,6 +1,0 @@
-{
-	"SplitTunnelNetworkParam": {
-		"Description": "OPTIONAL (if previous option is set to FALSE): The subnet IP you want the traffic to be sent to.",
-        "Type": "String"
-	}
-}

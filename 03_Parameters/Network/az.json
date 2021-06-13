@@ -1,0 +1,6 @@
+{
+	"AZParam": {
+		"Description": "The AZ where things should be deployed",
+		"Type": "AWS::EC2::AvailabilityZone::Name"
+	}
+}

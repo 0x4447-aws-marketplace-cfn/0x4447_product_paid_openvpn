@@ -1,10 +1,11 @@
 {
     "EFSMountTarget": {
         "Type": "AWS::EFS::MountTarget",
+        "Condition": "NewEFS",
         "Properties": {
           "FileSystemId": { "Ref": "EFS" },
           "SubnetId": { "Ref": "VPCSubnetsPublicParam" },
-          "SecurityGroups": [ { "Ref": "EFSSecurityGroup" } ]        
+          "SecurityGroups": [ { "Ref": "EFSSecurityGroup" } ]
         }
     }
 }
