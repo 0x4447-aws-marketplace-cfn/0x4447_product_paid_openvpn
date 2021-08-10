@@ -1,6 +1,6 @@
 {
 	"EFSIDParam": {
-		"Description": "Provide the EFS ID that you want to boot.",
+		"Description": "Provide the EFS ID where you want to store the unique data. The EFS Drive must be in the same subnet as the instance.",
         "Type": "String"
 	}
 }
