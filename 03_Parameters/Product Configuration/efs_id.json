@@ -1,6 +1,6 @@
 {
 	"EFSIDParam": {
-		"Description": "Provide the EFS ID where you want to store the unique data. The EFS Drive must be in the same subnet as the instance.",
+		"Description": "OPTIONAL: Provide a existing EFS ID to be used with existing data. Or keep blank to have a fresh EFS drive created.",
         "Type": "String"
 	}
 }
