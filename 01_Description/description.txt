@@ -1,1 +1,1 @@
-VPN Server - Using OpenVPN - product of 0x4447
+VPN Server - Using OpenVPN ::: a product from the AWS Marketplace by 0x4447, documentation at: https://documentation.0x4447.com
