@@ -48,7 +48,7 @@
 			"EmailParam": { "default" : "Email" },
 
 			"InstanceIPParam": { "default" : "Instance Public IP" },
-			"EFSIDParam": { "default" : "EFS ID" },
+			"EFSIDParam": { "default" : "EFS ID - Optional" },
 			"VirtualSubnetParam": { "default" : "Virtual Subnet for the VPN" },
 			"SplitTunnelParam": { "default" : "Split tunnel" }
 		}
