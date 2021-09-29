@@ -21,11 +21,9 @@
 
 				{ "Fn::If": [ "isCustomEFS", { "Fn::Sub": "EFS_ID=${EFSIDParam}" }, { "Fn::Sub": "EFS_ID=${EFS}" } ] },
 				{ "Fn::Sub": "VIRTUAL_NETWORK_PARAM=${VirtualSubnetParam}" },
-				{ "Fn::Sub": "VPN_SPLIT_TUNNEL=${SplitTunnelParam}" },
 
 				"echo EFS_ID=$EFS_ID >> /home/ec2-user/.env",
 				"echo VIRTUAL_NETWORK_PARAM=$VIRTUAL_NETWORK_PARAM >> /home/ec2-user/.env",
-				"echo VPN_SPLIT_TUNNEL=$VPN_SPLIT_TUNNEL >> /home/ec2-user/.env",
 
 				{ "Fn::Sub": "sudo /opt/aws/bin/cfn-init -v --region ${AWS::Region} --stack ${AWS::StackName} --resource EC2Instance" },
 

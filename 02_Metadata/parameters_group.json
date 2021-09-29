@@ -30,8 +30,7 @@
 				"Parameters" : [
 					"InstanceIPParam",
 					"EFSIDParam",
-					"VirtualSubnetParam",
-					"SplitTunnelParam"
+					"VirtualSubnetParam"
 				]
 			}
 		],
@@ -49,8 +48,7 @@
 
 			"InstanceIPParam": { "default" : "Instance Public IP" },
 			"EFSIDParam": { "default" : "EFS ID - Optional" },
-			"VirtualSubnetParam": { "default" : "Virtual Subnet for the VPN" },
-			"SplitTunnelParam": { "default" : "Split tunnel" }
+			"VirtualSubnetParam": { "default" : "Virtual Subnet for the VPN" }
 		}
 	}
 }
