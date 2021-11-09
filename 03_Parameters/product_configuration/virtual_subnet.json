@@ -1,7 +1,0 @@
-{
-	"VirtualSubnetParam": {
-		"Description": "The subnet to be used for the virtual network used by the VPN for routing. Keep the default setting unless you deployed the Product in a similar subnet.",
-        "Type": "String",
-        "Default": "10.8.0.0/16"
-	}
-}

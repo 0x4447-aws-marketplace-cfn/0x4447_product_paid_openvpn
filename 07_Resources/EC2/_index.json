@@ -6,7 +6,7 @@
 			"ImageId": "resolve:ssm:/aws/service/marketplace/prod-rzixioecwq4o4/latest",
 			"InstanceType": { "Ref": "InstanceTypeParam" },
 			"KeyName": { "Ref" : "KeyNameParam" },
-			"DisableApiTermination": true,
+			"DisableApiTermination": false,
 			"NetworkInterfaces": [{
 				"AssociatePublicIpAddress" : true,
 				"DeviceIndex": "0",
@@ -20,10 +20,8 @@
 				"#!/bin/bash",
 
 				{ "Fn::If": [ "isCustomEFS", { "Fn::Sub": "EFS_ID=${EFSIDParam}" }, { "Fn::Sub": "EFS_ID=${EFS}" } ] },
-				{ "Fn::Sub": "VIRTUAL_NETWORK_PARAM=${VirtualSubnetParam}" },
 
 				"echo EFS_ID=$EFS_ID >> /home/ec2-user/.env",
-				"echo VIRTUAL_NETWORK_PARAM=$VIRTUAL_NETWORK_PARAM >> /home/ec2-user/.env",
 
 				{ "Fn::Sub": "sudo /opt/aws/bin/cfn-init -v --region ${AWS::Region} --stack ${AWS::StackName} --resource EC2Instance" },
 

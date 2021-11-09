@@ -29,8 +29,7 @@
 				"Label" : { "default" : "Product Configuration" },
 				"Parameters" : [
 					"InstanceIPParam",
-					"EFSIDParam",
-					"VirtualSubnetParam"
+					"EFSIDParam"
 				]
 			}
 		],
@@ -47,8 +46,7 @@
 			"EmailParam": { "default" : "Email" },
 
 			"InstanceIPParam": { "default" : "Instance Public IP" },
-			"EFSIDParam": { "default" : "EFS ID - Optional" },
-			"VirtualSubnetParam": { "default" : "Virtual Subnet for the VPN" }
+			"EFSIDParam": { "default" : "EFS ID - Optional" }
 		}
 	}
 }
