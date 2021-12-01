@@ -23,16 +23,23 @@
 				},
 				{
 					"IpProtocol": "tcp",
+					"FromPort": 22,
+					"ToPort": 22,
+					"Description": "SSH",
+					"CidrIp": "0.0.0.0/0"
+				},
+				{
+					"IpProtocol": "tcp",
 					"FromPort": 443,
 					"ToPort": 443,
 					"Description": "OpenVPN",
 					"CidrIp": "0.0.0.0/0"
 				},
 				{
-					"IpProtocol": "tcp",
-					"FromPort": 22,
-					"ToPort": 22,
-					"Description": "SSH",
+					"IpProtocol": "udp",
+					"FromPort": 1194,
+					"ToPort": 1194,
+					"Description": "OpenVPN UDP",
 					"CidrIp": "0.0.0.0/0"
 				}
 			],
