@@ -1,0 +1,8 @@
+{
+	"CertificateKeySizeParam": {
+		"Description": "Provide the key size of the certificate. Acceptable values are: 1024, 2048.",
+        "Type": "String",
+        "Default": "1024",
+        "AllowedValues" : ["1024", "2048"]
+	}
+}

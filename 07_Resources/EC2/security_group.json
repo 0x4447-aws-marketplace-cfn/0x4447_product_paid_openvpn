@@ -32,7 +32,7 @@
 					"IpProtocol": "tcp",
 					"FromPort": 443,
 					"ToPort": 443,
-					"Description": "OpenVPN",
+					"Description": "OpenVPN TCP",
 					"CidrIp": "0.0.0.0/0"
 				},
 				{
