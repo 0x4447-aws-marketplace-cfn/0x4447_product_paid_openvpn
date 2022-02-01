@@ -31,7 +31,7 @@
 					"InstanceIPParam",
 					"CertificateKeySizeParam",
                     "ManagementIPParam",
-					"EFSIDParam",
+					"EFSIDParam"
 				]
 			}
 		],
