@@ -29,7 +29,9 @@
 				"Label" : { "default" : "Product Configuration" },
 				"Parameters" : [
 					"InstanceIPParam",
-					"EFSIDParam"
+					"CertificateKeySizeParam",
+                    "ManagementIPParam",
+					"EFSIDParam",
 				]
 			}
 		],
@@ -46,7 +48,9 @@
 			"EmailParam": { "default" : "Email" },
 
 			"InstanceIPParam": { "default" : "Instance Public IP" },
-			"EFSIDParam": { "default" : "EFS ID - Optional" }
+			"CertificateKeySizeParam": { "default" : "Certificate Key Size" },
+			"EFSIDParam": { "default" : "EFS ID - Optional" },
+			"ManagementIPParam": { "default" : "Management IP" }
 		}
 	}
 }

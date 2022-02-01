@@ -1,0 +1,7 @@
+{
+	"ManagementIPParam": {
+		"Description": "If you wish to only grant access to yourself to port 22 for remote management, change the default value to your IP address. Make sure to end it with /32",
+        "Type": "String",
+        "Default": "0.0.0.0/0"
+	}
+}

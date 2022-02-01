@@ -26,7 +26,7 @@
 					"FromPort": 22,
 					"ToPort": 22,
 					"Description": "SSH",
-					"CidrIp": "0.0.0.0/0"
+					"CidrIp": { "Ref": "ManagementIPParam" }
 				},
 				{
 					"IpProtocol": "tcp",
