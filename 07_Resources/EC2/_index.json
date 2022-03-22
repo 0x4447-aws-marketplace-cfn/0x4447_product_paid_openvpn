@@ -27,6 +27,10 @@
 
 				"echo EASYRSA_KEY_SIZE=$EASYRSA_KEY_SIZE >> /home/ec2-user/.env",
 
+				{ "Fn::Sub": "VPC_CIDR=${CidrParam}" },
+
+				"echo VPC_CIDR=$VPC_CIDR >> /home/ec2-user/.env",
+
 				{ "Fn::Sub": "sudo /opt/aws/bin/cfn-init -v --region ${AWS::Region} --stack ${AWS::StackName} --resource EC2Instance" },
 
 				{ "Fn::Sub": "sudo /opt/aws/bin/cfn-signal -s true --region ${AWS::Region} --stack ${AWS::StackName} --resource EC2Instance" }
