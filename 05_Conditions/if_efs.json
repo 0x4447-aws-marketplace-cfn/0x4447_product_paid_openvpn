@@ -1,6 +1,0 @@
-{
-	"isCustomEFS" : {
-		"Fn::Not" : [ { "Fn::Equals" : [ { "Ref" : "EFSIDParam"}, "" ] } ]
-	 }
-}
-

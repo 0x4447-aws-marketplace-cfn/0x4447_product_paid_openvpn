@@ -30,8 +30,7 @@
 				"Parameters" : [
 					"InstanceIPParam",
 					"CertificateKeySizeParam",
-                    "ManagementIPParam",
-					"EFSIDParam"
+                    "ManagementIPParam"
 				]
 			}
 		],
@@ -49,7 +48,6 @@
 
 			"InstanceIPParam": { "default" : "Instance Public IP" },
 			"CertificateKeySizeParam": { "default" : "Certificate Key Size" },
-			"EFSIDParam": { "default" : "EFS ID - Optional" },
 			"ManagementIPParam": { "default" : "Management IP" }
 		}
 	}

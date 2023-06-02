@@ -19,10 +19,6 @@
 
 				"#!/bin/bash",
 
-				{ "Fn::If": [ "isCustomEFS", { "Fn::Sub": "EFS_ID=${EFSIDParam}" }, { "Fn::Sub": "EFS_ID=${EFS}" } ] },
-
-				"echo EFS_ID=$EFS_ID >> /home/ec2-user/.env",
-
                 { "Fn::Sub": "EASYRSA_KEY_SIZE=${CertificateKeySizeParam}" },
 
 				"echo EASYRSA_KEY_SIZE=$EASYRSA_KEY_SIZE >> /home/ec2-user/.env",
