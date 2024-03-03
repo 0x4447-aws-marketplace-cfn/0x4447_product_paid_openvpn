@@ -1,0 +1,6 @@
+{
+	"BackupS3BucketParam": {
+		"Description": "Provide a S3 Bucket name for Users profiles and certificates data. If the field is empty, then we will create new empty bucket. If the field filled, then we will use stored Users data from this bucket on new instance.",
+        "Type": "String"
+	}
+}

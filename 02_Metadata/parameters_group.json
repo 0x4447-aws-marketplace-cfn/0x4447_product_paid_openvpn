@@ -28,9 +28,10 @@
 			{
 				"Label" : { "default" : "Product Configuration" },
 				"Parameters" : [
+					"BackupS3BucketParam",
 					"InstanceIPParam",
 					"CertificateKeySizeParam",
-                    "ManagementIPParam"
+					"ManagementIPParam"
 				]
 			}
 		],
@@ -46,6 +47,7 @@
 
 			"EmailParam": { "default" : "Email" },
 
+			"BackupS3BucketParam": { "defult" : "Users Data Backup S3 Bucket" },
 			"InstanceIPParam": { "default" : "Instance Public IP" },
 			"CertificateKeySizeParam": { "default" : "Certificate Key Size" },
 			"ManagementIPParam": { "default" : "Management IP" }
