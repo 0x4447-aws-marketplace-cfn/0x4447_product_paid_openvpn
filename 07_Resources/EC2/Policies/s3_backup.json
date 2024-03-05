@@ -13,7 +13,8 @@
 			    "s3:CreateBucket",
 			    "s3:ListAllMyBuckets",
 			    "s3:PutObject",
-			    "s3:GetObject"
+			    "s3:GetObject",
+			    "s3:ListBucket"
 			],
                         "Resource": [
 			    { "Fn::Sub": "arn:aws:s3:::*" }
