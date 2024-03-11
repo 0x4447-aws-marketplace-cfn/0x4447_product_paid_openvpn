@@ -1,0 +1,27 @@
+{
+    "EC2PolicyS3": {
+	"Type": "AWS::IAM::Policy",
+	"Properties": {
+	    "PolicyName": "s3_backup",
+	    "Roles": [ { "Ref": "EC2Role" } ],
+	    "PolicyDocument": {
+		"Version": "2012-10-17",
+		"Statement": [
+		    {
+			"Effect": "Allow",
+                        "Action": [
+			    "s3:CreateBucket",
+			    "s3:ListAllMyBuckets",
+			    "s3:PutObject",
+			    "s3:GetObject",
+			    "s3:ListBucket"
+			],
+                        "Resource": [
+			    { "Fn::Sub": "arn:aws:s3:::*" }
+			]
+		    }
+		]
+	    }
+	}
+    }
+}

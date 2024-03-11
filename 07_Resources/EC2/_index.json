@@ -27,6 +27,10 @@
 
 				"echo VPC_CIDR=$VPC_CIDR >> /home/ec2-user/.env",
 
+				{ "Fn::Sub": "S3_BACKUP=${BackupS3BucketParam}" },
+
+				"echo S3_BACKUP_BUCKET=$S3_BACKUP >> /home/ec2-user/.env",
+
 				{ "Fn::Sub": "sudo /opt/aws/bin/cfn-init -v --region ${AWS::Region} --stack ${AWS::StackName} --resource EC2Instance" },
 
 				{ "Fn::Sub": "sudo /opt/aws/bin/cfn-signal -s true --region ${AWS::Region} --stack ${AWS::StackName} --resource EC2Instance" }
