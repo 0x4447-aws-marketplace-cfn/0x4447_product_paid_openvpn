@@ -1,7 +1,7 @@
 {
 	"EC2InstancePolicyEIP": {
 		"Type": "AWS::IAM::Policy",
-		"Description": "The action AssociateAddress, doesn't no take an ARN, it needs to be *",
+		"Description": "Allows the instance to have the ElasticIP attached.",
 		"Properties": {
 			"PolicyName": "elastic_ip",
 			"Roles": [

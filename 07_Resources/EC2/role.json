@@ -3,6 +3,7 @@
         "Type": "AWS::IAM::Role",
         "Properties": {
             "RoleName": { "Fn::Sub": "0x4447_openvpn_EC2_${UniqueIdentifierParam}_${AWS::Region}" },
+            "Description": "This IAM role grants necessary permissions for EC2 instances to interact with AWS services. It allows the EC2 instances to assume the role, access CloudWatch for monitoring and logging, interact with the Systems Manager (SSM) for management tasks, and decrypt data using KMS keys. The role ensures that the EC2 instances have the required access to perform these functions securely and efficiently.", 
             "AssumeRolePolicyDocument": {
                 "Version": "2012-10-17",
                 "Statement": [

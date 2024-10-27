@@ -1,0 +1,7 @@
+{
+	"SourceVPNConnectionParam": {
+		"Description": "Typically, a VPN needs to accept connections from the entire internet. However, if you need to restrict access to specific IP addresses or networks, you can modify this value accordingly.",
+        "Type": "String",
+        "Default": "0.0.0.0/0"
+	}
+}
