@@ -1,27 +1,37 @@
 {
-    "EC2PolicyS3": {
-	"Type": "AWS::IAM::Policy",
-	"Properties": {
-	    "PolicyName": "s3_backup",
-	    "Roles": [ { "Ref": "EC2Role" } ],
-	    "PolicyDocument": {
-		"Version": "2012-10-17",
-		"Statement": [
-		    {
-			"Effect": "Allow",
-                        "Action": [
-			    "s3:CreateBucket",
-			    "s3:ListAllMyBuckets",
-			    "s3:PutObject",
-			    "s3:GetObject",
-			    "s3:ListBucket"
+	"EC2PolicyS3": {
+		"Type": "AWS::IAM::Policy",
+		"Description": "This policy allows the EC2 instance to create, list, and manage objects in the S3 bucket specified by the BackupS3BucketParam parameter. It is used for backing up data from the EC2 instance to the S3 bucket.",
+		"Properties": {
+			"PolicyName": "s3_backup",
+			"Roles": [
+				{
+					"Ref": "EC2Role"
+				}
 			],
-                        "Resource": [
-			    { "Fn::Sub": "arn:aws:s3:::*" }
-			]
-		    }
-		]
-	    }
+			"PolicyDocument": {
+				"Version": "2012-10-17",
+				"Statement": [
+					{
+						"Effect": "Allow",
+						"Action": [
+							"s3:CreateBucket",
+							"s3:ListAllMyBuckets",
+							"s3:PutObject",
+							"s3:GetObject",
+							"s3:ListBucket"
+						],
+						"Resource": [
+							{
+								"Fn::Sub": "arn:aws:s3:::${BackupS3BucketParam}"
+							},
+							{
+								"Fn::Sub": "arn:aws:s3:::${BackupS3BucketParam}/*"
+							}
+						]
+					}
+				]
+			}
+		}
 	}
-    }
 }

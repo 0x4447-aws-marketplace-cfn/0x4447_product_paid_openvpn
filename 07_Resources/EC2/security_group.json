@@ -10,7 +10,7 @@
 					"IpProtocol": "-1",
 					"FromPort": -1,
 					"ToPort": -1,
-					"CidrIp": "0.0.0.0/0"
+					"CidrIp": { "Ref": "SourceVPNConnectionParam" }
 				}
 			],
 			"SecurityGroupIngress": [
@@ -26,14 +26,14 @@
 					"FromPort": 443,
 					"ToPort": 443,
 					"Description": "OpenVPN TCP",
-					"CidrIp": "0.0.0.0/0"
+					"CidrIp": { "Ref": "SourceVPNConnectionParam" }
 				},
 				{
 					"IpProtocol": "udp",
 					"FromPort": 1194,
 					"ToPort": 1194,
 					"Description": "OpenVPN UDP",
-					"CidrIp": "0.0.0.0/0"
+					"CidrIp": { "Ref": "SourceVPNConnectionParam" }
 				}
 			],
 			"Tags": [
